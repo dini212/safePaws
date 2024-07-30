@@ -30,10 +30,10 @@ This project is the final project of the Java Development Bootcamp, conducted in
    - Authentication Username & Password
    - Return JWT Token
 3. Adoption Request
-   a. Potential adopters can browse through animal profiles that only has status AVAILABLE.
-   b. Once an adopter finds a suitable animal, they can submit an adoption request through the API.
-   c. The schedule for home inspection will automatically shown the day after adoption request.
-   d. If the day after adoption request already been scheduled by another potential adopters then it will choose the day after that.
+   - Potential adopters can browse through animal profiles that only has status AVAILABLE.
+   - Once an adopter finds a suitable animal, they can submit an adoption request through the API.
+   - he schedule for home inspection will automatically shown the day after adoption request.
+   - the day after adoption request already been scheduled by another potential adopters then it will choose the day after that.
 Outcome:
 - If the home environment is deemed worthy, the adoption process proceeds, the animal finds a new home, And the animal status will turn into NOT-AVAILABLE.
 - If the environment is not suitable, the shelter staff has the right to reject the adoption request.
