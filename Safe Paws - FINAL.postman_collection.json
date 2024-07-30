@@ -1,0 +1,1106 @@
+{
+	"info": {
+		"_postman_id": "6f05c336-6f44-4196-ad6b-5480c154a15a",
+		"name": "Safe Paws",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3346916"
+	},
+	"item": [
+		{
+			"name": "Shelter",
+			"item": [
+				{
+					"name": "Register Shelter",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Shelter Jakarta\",\n    \"email\": \"jakarta_shelter@gmail.com\",\n    \"password\": \"test\",\n    \"phone\": \"08123456789\",\n    \"description\": \"Animal shelter in Jakarta\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/register-shelter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"register-shelter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Shelter",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jakarta_shelter@gmail.com\",\n    \"password\": \"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getShelter",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1NIRUxURVIiXSwiZW1haWwiOiJqYWthcnRhX3NoZWx0ZXJAZ21haWwuY29tIiwic3ViIjoiamFrYXJ0YV9zaGVsdGVyQGdtYWlsLmNvbSIsImlhdCI6MTcxODU5MTg5MywiZXhwIjoxNzE4NTk1NDkzfQ.OeDh3Y2fMMx973o9XQhyYJdmgfNOCAx0jPVArY4Mvag",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/shelter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"shelter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Shelter",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1NIRUxURVIiXSwiZW1haWwiOiJqYWthcnRhX3NoZWx0ZXJAZ21haWwuY29tIiwic3ViIjoiamFrYXJ0YV9zaGVsdGVyQGdtYWlsLmNvbSIsImlhdCI6MTcxODU5MTg5MywiZXhwIjoxNzE4NTk1NDkzfQ.OeDh3Y2fMMx973o9XQhyYJdmgfNOCAx0jPVArY4Mvag",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"1354b617-dda6-4e8e-90d2-24d5e20d5952\",\n    \"name\": \"Shelter Surabaya\",\n    \"password\": \"tes\",\n    \"phone\": \"081234567890\",\n    \"description\": \"Animal Shelter in Surabaya\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/shelter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"shelter"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Shelter Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1NIRUxURVIiXSwiZW1haWwiOiJqYWthcnRhX3NoZWx0ZXJAZ21haWwuY29tIiwic3ViIjoiamFrYXJ0YV9zaGVsdGVyQGdtYWlsLmNvbSIsImlhdCI6MTcxODYxODY0OCwiZXhwIjoxNzE4NjIyMjQ4fQ.JcfBVJTHprjzmeVb9eckXHINQPBImsaVNRcv0I-nmN0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cityId\": \"98\",\n    \"description\": \"Jl Citarum\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/shelter/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"shelter",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Shelter Address",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1NIRUxURVIiXSwiZW1haWwiOiJqYWthcnRhX3NoZWx0ZXJAZ21haWwuY29tIiwic3ViIjoiamFrYXJ0YV9zaGVsdGVyQGdtYWlsLmNvbSIsImlhdCI6MTcxODYxODY0OCwiZXhwIjoxNzE4NjIyMjQ4fQ.JcfBVJTHprjzmeVb9eckXHINQPBImsaVNRcv0I-nmN0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/shelter/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"shelter",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Shelter Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1NIRUxURVIiXSwiZW1haWwiOiJqYWthcnRhX3NoZWx0ZXJAZ21haWwuY29tIiwic3ViIjoiamFrYXJ0YV9zaGVsdGVyQGdtYWlsLmNvbSIsImlhdCI6MTcxODYxODY0OCwiZXhwIjoxNzE4NjIyMjQ4fQ.JcfBVJTHprjzmeVb9eckXHINQPBImsaVNRcv0I-nmN0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"c3e4f401-1b2a-4f8c-a8a1-1c94dd3716e1\",\n    \"cityId\": \"69\",\n    \"description\": \"Jl jalan jlan jalan\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/shelter/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"shelter",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Address Shelter",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwiZW1haWwiOiJ1c2VyX3JlZ3VsZXJAZ21haWwuY29tIiwic3ViIjoidXNlcl9yZWd1bGVyQGdtYWlsLmNvbSIsImlhdCI6MTcxODYxNDQxMSwiZXhwIjoxNzE4NjE4MDExfQ.g8ZWiiG_JXScvM4hoaVTPoQLO169ZAQV8Zt8PD353uk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"c3e4f401-1b2a-4f8c-a8a1-1c94dd3716e1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/shelter/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"shelter",
+								"address"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register Regular User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fullName\": \"User Reguler\",\n    \"email\": \"user_reguler@gmail.com\",\n    \"password\": \"test\",\n    \"phone\": \"08123456789\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/register-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"register-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Regular User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"user_reguler@gmail.com\",\n    \"password\": \"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwiZW1haWwiOiJ1c2VyX3JlZ3VsZXJAZ21haWwuY29tIiwic3ViIjoidXNlcl9yZWd1bGVyQGdtYWlsLmNvbSIsImlhdCI6MTcxODU5MTg2MSwiZXhwIjoxNzE4NTk1NDYxfQ.sllL--IOv-_KIo9MVUISnVOmReN6UDPZMsbWjD2SvlY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Regular User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwiZW1haWwiOiJ1c2VyX3JlZ3VsZXJAZ21haWwuY29tIiwic3ViIjoidXNlcl9yZWd1bGVyQGdtYWlsLmNvbSIsImlhdCI6MTcxODU5MTg2MSwiZXhwIjoxNzE4NTk1NDYxfQ.sllL--IOv-_KIo9MVUISnVOmReN6UDPZMsbWjD2SvlY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"017530fe-06f5-4cf2-bab7-816e52382dae\",\n    \"fullName\": \"User Regulaaaaar\",\n    \"password\": \"tes\",\n    \"phone\": \"081234567890\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Regular User Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwiZW1haWwiOiJ1c2VyX3JlZ3VsZXJAZ21haWwuY29tIiwic3ViIjoidXNlcl9yZWd1bGVyQGdtYWlsLmNvbSIsImlhdCI6MTcxODUwNTYzMSwiZXhwIjoxNzE4NTA5MjMxfQ.ULm65zr7D0oFUiBVuDw5wSACxvmqWNq8ai-0htPe_cQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cityId\": \"27\",\n    \"description\": \"Jl Pramuka\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Regular User Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwiZW1haWwiOiJ1c2VyX3JlZ3VsZXJAZ21haWwuY29tIiwic3ViIjoidXNlcl9yZWd1bGVyQGdtYWlsLmNvbSIsImlhdCI6MTcxODYxNDQxMSwiZXhwIjoxNzE4NjE4MDExfQ.g8ZWiiG_JXScvM4hoaVTPoQLO169ZAQV8Zt8PD353uk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Regular User Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwiZW1haWwiOiJ1c2VyX3JlZ3VsZXJAZ21haWwuY29tIiwic3ViIjoidXNlcl9yZWd1bGVyQGdtYWlsLmNvbSIsImlhdCI6MTcxODYxNDQxMSwiZXhwIjoxNzE4NjE4MDExfQ.g8ZWiiG_JXScvM4hoaVTPoQLO169ZAQV8Zt8PD353uk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"c3e4f401-1b2a-4f8c-a8a1-1c94dd3716e1\",\n    \"cityId\": \"69\",\n    \"description\": \"Jl jalan jlan jalan\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Address User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwiZW1haWwiOiJ1c2VyX3JlZ3VsZXJAZ21haWwuY29tIiwic3ViIjoidXNlcl9yZWd1bGVyQGdtYWlsLmNvbSIsImlhdCI6MTcxODYxNDQxMSwiZXhwIjoxNzE4NjE4MDExfQ.g8ZWiiG_JXScvM4hoaVTPoQLO169ZAQV8Zt8PD353uk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"c3e4f401-1b2a-4f8c-a8a1-1c94dd3716e1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"address"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Animal",
+			"item": [
+				{
+					"name": "Shelter add animal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1NIRUxURVIiXSwiZW1haWwiOiJqYWthcnRhX3NoZWx0ZXJAZ21haWwuY29tIiwic3ViIjoiamFrYXJ0YV9zaGVsdGVyQGdtYWlsLmNvbSIsImlhdCI6MTcxODcwMDQ0NSwiZXhwIjoxNzE4NzA0MDQ1fQ.Wgk3xaCjpERGeiZLZCWRkrTYrkGApLADfqHSfPKxvtE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Melan\",\r\n    \"species\": \"dog\",\r\n    \"breed\": \"Husky\",\r\n    \"weight\": \"12\",\r\n    \"age\": \"4\",\r\n    \"animalStatus\": \"AVAILABLE\",\r\n    \"description\": \"very friendly\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/shelter/animal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"shelter",
+								"animal"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "c5082c50-6ec6-4e14-8722-2ea903887371",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Shelter get animal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1NIRUxURVIiXSwiZW1haWwiOiJqYWthcnRhX3NoZWx0ZXJAZ21haWwuY29tIiwic3ViIjoiamFrYXJ0YV9zaGVsdGVyQGdtYWlsLmNvbSIsImlhdCI6MTcxODY3OTY4OCwiZXhwIjoxNzE4NjgzMjg4fQ.MKCJSIDg5snUwnExHxrcmbqBPUvGhQq58DDH6xv0ieA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/shelter/animal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"shelter",
+								"animal"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "c5082c50-6ec6-4e14-8722-2ea903887371",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "species",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "breed",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "weight",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "age",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User get animal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwiZW1haWwiOiJ1c2VyX3JlZ3VsZXJAZ21haWwuY29tIiwic3ViIjoidXNlcl9yZWd1bGVyQGdtYWlsLmNvbSIsImlhdCI6MTcxODY5NDA3MSwiZXhwIjoxNzE4Njk3NjcxfQ.vvjzP_Ecq8epF1AJRjnAQqWw2ElhDMYGUd8X53KZYSQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/animal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"animal"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "c5082c50-6ec6-4e14-8722-2ea903887371",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Shelter update animal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1NIRUxURVIiXSwiZW1haWwiOiJqYWthcnRhX3NoZWx0ZXJAZ21haWwuY29tIiwic3ViIjoiamFrYXJ0YV9zaGVsdGVyQGdtYWlsLmNvbSIsImlhdCI6MTcxODY5MTk4OSwiZXhwIjoxNzE4Njk1NTg5fQ.VoXHO9SnaaeP4Fza2spts6lu_s5GYYl9a4eZV_JLC3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"44f0e280-4337-46b6-bdc4-833e6ab65dcd\",\r\n    \"shelter\": \"Shelter Jakarta\",\r\n    \"name\": \"Tim\",\r\n    \"species\": \"cat\",\r\n    \"breed\": \"british short hair\",\r\n    \"weight\": 4,\r\n    \"age\": 2,\r\n    \"animalStatus\": \"AVAILABLE\",\r\n    \"description\": \"very friendly\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/shelter/animal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"shelter",
+								"animal"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "c5082c50-6ec6-4e14-8722-2ea903887371",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Shelter delete animal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1NIRUxURVIiXSwiZW1haWwiOiJqYWthcnRhX3NoZWx0ZXJAZ21haWwuY29tIiwic3ViIjoiamFrYXJ0YV9zaGVsdGVyQGdtYWlsLmNvbSIsImlhdCI6MTcxODY5MTk4OSwiZXhwIjoxNzE4Njk1NTg5fQ.VoXHO9SnaaeP4Fza2spts6lu_s5GYYl9a4eZV_JLC3M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"2ec62b6c-bd2c-42c9-bc52-a23c4537b5a4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/shelter/animal",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"shelter",
+								"animal"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "c5082c50-6ec6-4e14-8722-2ea903887371",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Adoption",
+			"item": [
+				{
+					"name": "User Add adoption",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwiZW1haWwiOiJ1c2VyX3JlZ3VsZXIxQGdtYWlsLmNvbSIsInN1YiI6InVzZXJfcmVndWxlcjFAZ21haWwuY29tIiwiaWF0IjoxNzE4Nzc5ODE5LCJleHAiOjE3MTg3ODM0MTl9.WpWYlN4VqnDWosc102A4HkaNwQ5QB06AmnK-3s60Qik",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"animalId\": \"692f81fd-2791-4d9e-bb1f-69a11fe7c9cc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/adoption",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"adoption"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Get adoption",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwiZW1haWwiOiJ1c2VyX3JlZ3VsZXJAZ21haWwuY29tIiwic3ViIjoidXNlcl9yZWd1bGVyQGdtYWlsLmNvbSIsImlhdCI6MTcxODcxMDI2NiwiZXhwIjoxNzE4NzEzODY2fQ.CgINC5aSGsK2ob9CMu2Z6Hh1DoAv4uwctk4nENlf8lI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"animalId\": \"692f81fd-2791-4d9e-bb1f-69a11fe7c9cc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/adoption?id&inspectionDate&adoptionStatus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"adoption"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": null
+								},
+								{
+									"key": "inspectionDate",
+									"value": null
+								},
+								{
+									"key": "adoptionStatus",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Shelter Get adoption",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1NIRUxURVIiXSwiZW1haWwiOiJzdXJhYmF5YV9zaGVsdGVyQGdtYWlsLmNvbSIsInN1YiI6InN1cmFiYXlhX3NoZWx0ZXJAZ21haWwuY29tIiwiaWF0IjoxNzE4NzE1MzMyLCJleHAiOjE3MTg3MTg5MzJ9.sB1icHAAD_27DXlFeqPxEFO-QHxRmQJKRpvk1DrlmjM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/shelter/adoption?id&inspectionDate&adoptionStatus",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"shelter",
+								"adoption"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": null
+								},
+								{
+									"key": "inspectionDate",
+									"value": null
+								},
+								{
+									"key": "adoptionStatus",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Shelter Update Adoption",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1NIRUxURVIiXSwiZW1haWwiOiJtYWxhbmdfc2hlbHRlckBnbWFpbC5jb20iLCJzdWIiOiJtYWxhbmdfc2hlbHRlckBnbWFpbC5jb20iLCJpYXQiOjE3MTg4NTA0OTgsImV4cCI6MTcxODg1NDA5OH0.eBOGrZlUSO0mC7iEy28GUvLKVhIv4JJKSWLGXJXn1sE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"adoptionId\": \"6dc90d0c-2727-489d-9fb5-68519c053bc6\",\n    \"adoptionStatus\": \"APPROVED\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/shelter/adoption",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"shelter",
+								"adoption"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Delete adoption",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwiZW1haWwiOiJ1c2VyX3JlZ3VsZXJAZ21haWwuY29tIiwic3ViIjoidXNlcl9yZWd1bGVyQGdtYWlsLmNvbSIsImlhdCI6MTcxODcxNDA2NSwiZXhwIjoxNzE4NzE3NjY1fQ.JN8vI1sWLs3n_S1Un7fLYrJPOvGmKrxrKa8DajOCBpg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"071c5767-0024-4d8e-85f2-2dbf9bce261d\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/adoption",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"adoption"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Shelter Delete adoption",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwiZW1haWwiOiJ1c2VyX3JlZ3VsZXJAZ21haWwuY29tIiwic3ViIjoidXNlcl9yZWd1bGVyQGdtYWlsLmNvbSIsImlhdCI6MTcxODcxNDA2NSwiZXhwIjoxNzE4NzE3NjY1fQ.JN8vI1sWLs3n_S1Un7fLYrJPOvGmKrxrKa8DajOCBpg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"071c5767-0024-4d8e-85f2-2dbf9bce261d\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/adoption",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"adoption"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
