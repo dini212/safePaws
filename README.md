@@ -39,4 +39,27 @@ Outcome:
 - If the home environment is deemed worthy, the adoption process proceeds, the animal finds a new home, And the animal status will turn into NOT-AVAILABLE.
 - If the environment is not suitable, the shelter staff has the right to reject the adoption request.
 
+## API Testing with Postman
+You can test all SafePaws endpoints using the provided Postman collection:
+[Download Collection](./Safe%20Paws%20-%20FINAL.postman_collection.json) Or Click folder postman collection from above.
+
+### How to Use
+1. Open Postman.
+2. Import the collection file.
+3. Set the environment variables (e.g., base URL, JWT token if needed).
+4. Run the requests or execute the collection as a test suite.
+
+## API Documentation with Swagger
+
+SafePaws provides interactive API documentation using **Swagger UI**.  
+Swagger allows you to explore endpoints, test requests, and see request/response details directly in the browser.
+
+🔗 [View API Documentation on SwaggerHub](https://app.swaggerhub.com/apis-docs/AndhikaPranadipa/safe-paws/1.0.0)
+
+### How to Access Locally
+1. Run the SafePaws Spring Boot application.
+2. Open your browser at:
+   - [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)  
+   - or [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html) (depending on Spring Boot version).
+
 
