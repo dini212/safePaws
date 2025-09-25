@@ -1,96 +1,71 @@
-🐾 SafePaws – Animal Shelter & Adoption API
+# 🐾 SafePaws – Animal Shelter & Adoption API
 
-SafePaws is a Spring Boot REST API project designed to manage animal shelters, adoptions, and users with secure authentication using JWT.
-This project was built to demonstrate backend development skills including API design, authentication, documentation, and testing.
+This project is the final project of the Java Development Bootcamp, conducted in a group. This project aims to facilitate the adoption of stray animals in need of new homes by the general public through an online platform. Within this application, users can submit adoption requests to shelters, which have the ability to review and respond to these requests by either accepting or rejecting them. In this project, we use Java Spring Boot RestClient API for retrieving shelter addresses and JWT for authentication.
 
-🚀 Features
+# 🚀 Features
+1. User Registration & Authentication (JWT-based)
+2. Shelter Management (CRUD)
+3. Animal Management (CRUD)
+4. Adoption Flow (request & approval)
+5. API Documentation (Swagger UI + Postman Collection)
+6. Secure endpoints with JWT token
+7. Database integration with MySQL
 
-User Registration & Authentication (JWT-based)
+ # 🛠️ Tech Stack
+- Language: Java (Spring Boot)
+- Database: MySQL
+- Authentication: JWT
+- Tools: Maven, Postman, SwaggerHub
+- Testing: JUnit (planned), Postman Collection
 
-Shelter Management (CRUD)
+# ⚙️ Installation & Setup
+### Clone this repository:
 
-Animal Management (CRUD)
+  git clone https://github.com/dini212/safePaws.git
+  cd safePaws
 
-Adoption Flow (request & approval)
-
-API Documentation (Swagger UI + Postman Collection)
-
-Secure endpoints with JWT token
-
-Database integration with MySQL
-
-🛠️ Tech Stack
-
-Language: Java (Spring Boot)
-
-Database: MySQL
-
-Authentication: JWT
-
-Tools: Maven, Postman, SwaggerHub
-
-Testing: JUnit (planned), Postman Collection
-
-⚙️ Installation & Setup
-
-Clone this repository:
-
-git clone https://github.com/dini212/safePaws.git
-cd safePaws
-
-
-Configure your database in application.properties:
-
+### Configure your database in application.properties:
 spring.datasource.url=jdbc:mysql://localhost:3306/safepaws
 spring.datasource.username=root
 spring.datasource.password=yourpassword
 
-
-Run the application:
-
+### Run the application:
 mvn spring-boot:run
 
 
-The API will be available at:
+### The API will be available at:
+👉 http://localhost:8080
 
-http://localhost:8080
+# 📬 API Testing with Postman
 
-📬 API Testing with Postman
+You can test all SafePaws endpoints using the provided Postman collection:  
+📂 [Download Collection](./Safe%20Paws%20-%20FINAL.postman_collection.json)
 
-You can test all SafePaws endpoints using the provided Postman collection:
-📂 Download Collection
+### How to Use
+1. Open Postman.
+2. Import the collection file.
+3. Set the environment variables (e.g., base URL, JWT token if needed).
+4. Run the requests or execute the collection as a test suite.
 
-How to Use
-
-Open Postman.
-
-Import the collection file.
-
-Set the environment variables (e.g., base URL, JWT token if needed).
-
-Run the requests or execute the collection as a test suite.
-
-📖 API Documentation with Swagger
+# 📖 API Documentation with Swagger
 
 SafePaws also provides interactive API documentation using Swagger UI.
 Swagger allows you to explore endpoints, test requests, and view request/response details directly in your browser.
 
-🔗 View API Documentation on SwaggerHub
+🔗 [View API Documentation on SwaggerHub](https://app.swaggerhub.com/apis-docs/AndhikaPranadipa/safe-paws/1.0.0)
 
-Local Access
+### Local Access
 
-Start the SafePaws application.
+1. Start the SafePaws application.
+2. Open your browser at:
+   - http://localhost:8080/swagger-ui.html
+   - or http://localhost:8080/swagger-ui/index.html
 
-Open your browser at:
+# 🗂️ Example Endpoints
 
-http://localhost:8080/swagger-ui.html
+### Register User
 
-or http://localhost:8080/swagger-ui/index.html
-
-🗂️ Example Endpoints
-
-Register User
-POST /api/users/register
+#### POST /api/users/register
 
 {
   "username": "johndoe",
@@ -98,25 +73,15 @@ POST /api/users/register
   "password": "mypassword123"
 }
 
+### Login User
 
-Login User
-POST /api/users/login
+#### POST /api/users/login
 
 {
   "email": "john@example.com",
   "password": "mypassword123"
 }
 
+### Get All Animals
 
-Get All Animals
-GET /api/animals
-
-📊 Project Structure
-src/main/java/com/safepaws
- ├── controller
- ├── service
- ├── repository
- ├── model
- ├── config
- └── dto
-
+#### GET /api/animals
