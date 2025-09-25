@@ -1,65 +1,122 @@
-# Online Animal Shelter
+🐾 SafePaws – Animal Shelter & Adoption API
 
-## Description 
-This project is the final project of the Java Development Bootcamp, conducted in a group. This project aims to facilitate the adoption of stray animals in need of new homes by the general public through an online platform. Within this application, users can submit adoption requests to shelters, which have the ability to review and respond to these requests by either accepting or rejecting them. In this project, we use Java Spring Boot RestClient API for retrieving shelter addresses and JWT for authentication.
+SafePaws is a Spring Boot REST API project designed to manage animal shelters, adoptions, and users with secure authentication using JWT.
+This project was built to demonstrate backend development skills including API design, authentication, documentation, and testing.
 
-## Key Features
-1. Register as a shelter or a regular user on our app
-2. List available animals for adoption by regular users
-3. Regular users can propose adopting an animal from the available list
-4. Shelters can accept or reject adoption proposals from regular users
+🚀 Features
 
-## Features Available for User
-1. Registration User / Potential Adopter
-2. Login User / Potential Adopter
-3. Profile Management
-4. Adoption
+User Registration & Authentication (JWT-based)
 
-## Features Available for Admin Shelter
-1. Registration User  Shelter
-2. Login User Shelter
-3. Management Profile Shelter
-4. Management  Animal
-5. Adoption decision
+Shelter Management (CRUD)
 
-## How Safe Paws Work
-1. Register
-   - Register
-   - add address data
-2. Login
-   - Authentication Username & Password
-   - Return JWT Token
-3. Adoption Request
-   - Potential adopters can browse through animal profiles that only has status AVAILABLE.
-   - Once an adopter finds a suitable animal, they can submit an adoption request through the API.
-   - he schedule for home inspection will automatically shown the day after adoption request.
-   - the day after adoption request already been scheduled by another potential adopters then it will choose the day after that.
+Animal Management (CRUD)
 
-Outcome:
-- If the home environment is deemed worthy, the adoption process proceeds, the animal finds a new home, And the animal status will turn into NOT-AVAILABLE.
-- If the environment is not suitable, the shelter staff has the right to reject the adoption request.
+Adoption Flow (request & approval)
 
-## API Testing with Postman
+API Documentation (Swagger UI + Postman Collection)
+
+Secure endpoints with JWT token
+
+Database integration with MySQL
+
+🛠️ Tech Stack
+
+Language: Java (Spring Boot)
+
+Database: MySQL
+
+Authentication: JWT
+
+Tools: Maven, Postman, SwaggerHub
+
+Testing: JUnit (planned), Postman Collection
+
+⚙️ Installation & Setup
+
+Clone this repository:
+
+git clone https://github.com/dini212/safePaws.git
+cd safePaws
+
+
+Configure your database in application.properties:
+
+spring.datasource.url=jdbc:mysql://localhost:3306/safepaws
+spring.datasource.username=root
+spring.datasource.password=yourpassword
+
+
+Run the application:
+
+mvn spring-boot:run
+
+
+The API will be available at:
+
+http://localhost:8080
+
+📬 API Testing with Postman
+
 You can test all SafePaws endpoints using the provided Postman collection:
-[Download Collection](./Safe%20Paws%20-%20FINAL.postman_collection.json) Or Click folder postman collection from above.
+📂 Download Collection
 
-### How to Use
-1. Open Postman.
-2. Import the collection file.
-3. Set the environment variables (e.g., base URL, JWT token if needed).
-4. Run the requests or execute the collection as a test suite.
+How to Use
 
-## API Documentation with Swagger
+Open Postman.
 
-SafePaws provides interactive API documentation using **Swagger UI**.  
-Swagger allows you to explore endpoints, test requests, and see request/response details directly in the browser.
+Import the collection file.
 
-🔗 [View API Documentation on SwaggerHub](https://app.swaggerhub.com/apis-docs/AndhikaPranadipa/safe-paws/1.0.0)
+Set the environment variables (e.g., base URL, JWT token if needed).
 
-### How to Access Locally
-1. Run the SafePaws Spring Boot application.
-2. Open your browser at:
-   - [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)  
-   - or [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html) (depending on Spring Boot version).
+Run the requests or execute the collection as a test suite.
 
+📖 API Documentation with Swagger
+
+SafePaws also provides interactive API documentation using Swagger UI.
+Swagger allows you to explore endpoints, test requests, and view request/response details directly in your browser.
+
+🔗 View API Documentation on SwaggerHub
+
+Local Access
+
+Start the SafePaws application.
+
+Open your browser at:
+
+http://localhost:8080/swagger-ui.html
+
+or http://localhost:8080/swagger-ui/index.html
+
+🗂️ Example Endpoints
+
+Register User
+POST /api/users/register
+
+{
+  "username": "johndoe",
+  "email": "john@example.com",
+  "password": "mypassword123"
+}
+
+
+Login User
+POST /api/users/login
+
+{
+  "email": "john@example.com",
+  "password": "mypassword123"
+}
+
+
+Get All Animals
+GET /api/animals
+
+📊 Project Structure
+src/main/java/com/safepaws
+ ├── controller
+ ├── service
+ ├── repository
+ ├── model
+ ├── config
+ └── dto
 
