@@ -14,7 +14,7 @@ This API facilitates animal data management, user registration, and an automated
 1. Core: Java, Spring Boot, Spring Security
 2. Database: MySQL
 3. Tools & Build: Maven, Postman, SwaggerHub
-4.Testing: JUnit, Postman API Testing
+4. 4.Testing: JUnit, Postman API Testing
 
 # ⚙️ Installation & Setup
 ### Clone this repository:
