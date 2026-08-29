@@ -5,9 +5,9 @@ The animal adoption process is often hindered by manual record-keeping and decen
 This API facilitates animal data management, user registration, and an automated, secure adoption approval process. Built with a RESTful architecture, the system leverages Spring Boot RestClient to dynamically fetch shelter location and address data from a third-party external service.
 
 # 🚀 Features
-1.** Secure Authentication:** Implemented JSON Web Token (JWT) based security to protect API endpoints and validate user sessions effectively.
-2.** Role-Based Adoption Workflow:** Structured the business logic to separate user roles; public users can submit adoption requests, while shelter administrators hold the full authority to review (accept or reject) these applications.
-3.** Third-Party API Integration:** Successfully integrated an external API service using Spring Boot RestClient to enrich operational shelter data.
+1. **Secure Authentication:** Implemented JSON Web Token (JWT) based security to protect API endpoints and validate user sessions effectively.
+2.**Role-Based Adoption Workflow:** Structured the business logic to separate user roles; public users can submit adoption requests, while shelter administrators hold the full authority to review (accept or reject) these applications.
+3.**Third-Party API Integration:** Successfully integrated an external API service using Spring Boot RestClient to enrich operational shelter data.
 4. **Comprehensive Documentation:** All API endpoints are interactively documented using Swagger UI and thoroughly tested via a Postman Collection.
 
  # 🛠️ Tech Stack
