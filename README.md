@@ -1,22 +1,20 @@
 # 🐾 SafePaws – Animal Shelter & Adoption API
 
-This project is the final project of the Java Development Bootcamp, conducted in a group. This project aims to facilitate the adoption of stray animals in need of new homes by the general public through an online platform. Within this application, users can submit adoption requests to shelters, which have the ability to review and respond to these requests by either accepting or rejecting them. In this project, we use Java Spring Boot RestClient API for retrieving shelter addresses and JWT for authentication.
+The animal adoption process is often hindered by manual record-keeping and decentralized communication between shelters and potential adopters. SafePaws serves as an integrated backend solution designed to digitalize and streamline these operational workflows.
+
+This API facilitates animal data management, user registration, and an automated, secure adoption approval process. Built with a RESTful architecture, the system leverages Spring Boot RestClient to dynamically fetch shelter location and address data from a third-party external service.
 
 # 🚀 Features
-1. User Registration & Authentication (JWT-based)
-2. Shelter Management (CRUD)
-3. Animal Management (CRUD)
-4. Adoption Flow (request & approval)
-5. API Documentation (Swagger UI + Postman Collection)
-6. Secure endpoints with JWT token
-7. Database integration with MySQL
+1.** Secure Authentication:** Implemented JSON Web Token (JWT) based security to protect API endpoints and validate user sessions effectively.
+2.** Role-Based Adoption Workflow:** Structured the business logic to separate user roles; public users can submit adoption requests, while shelter administrators hold the full authority to review (accept or reject) these applications.
+3.** Third-Party API Integration:** Successfully integrated an external API service using Spring Boot RestClient to enrich operational shelter data.
+4. **Comprehensive Documentation:** All API endpoints are interactively documented using Swagger UI and thoroughly tested via a Postman Collection.
 
  # 🛠️ Tech Stack
-- Language: Java (Spring Boot)
-- Database: MySQL
-- Authentication: JWT
-- Tools: Maven, Postman, SwaggerHub
-- Testing: JUnit (planned), Postman Collection
+1. Core: Java, Spring Boot, Spring Security
+2. Database: MySQL
+3. Tools & Build: Maven, Postman, SwaggerHub
+4.Testing: JUnit, Postman API Testing
 
 # ⚙️ Installation & Setup
 ### Clone this repository:
